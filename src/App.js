@@ -41,7 +41,7 @@ function App() {
         </div>
       </div>
       {/* passing data to todolist component */}
-      <TodoList addTaskHandler={task} />
+      <TodoList addTask={task} />
     </div>
   );
 }

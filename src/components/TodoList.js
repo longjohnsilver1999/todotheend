@@ -2,11 +2,11 @@ import React from "react";
 import { useState, useEffect } from "react"; //importing necessary hooks
 import { Bars } from "react-loader-spinner";
 import TodoListItem from "./TodoListItem";
-function TodoList({ addTaskHandler }) {
+function TodoList({ addTask }) {
   //updating and returning state
   const [todo, setTodo] = useState([]); //array
   const [loading, setLoading] = useState(false);
-  const [inputTask, setInputTask] = useState(addTaskHandler);
+  const [inputTask, setInputTask] = useState(addTask);
   //using useeffect hook to add and display fetched state including object including data
   useEffect(() => {
     //fetch from api
@@ -18,13 +18,13 @@ function TodoList({ addTaskHandler }) {
           setTodo(json);
           setLoading(true);
         }, 1000);
-        console.log(json);
+        // console.log(json);
       });
   }, []);
 
   //adding newly added  task to state
   useEffect(() => {
-    let bringTasks = addTaskHandler.map((task, index) => {
+    let bringTasks = addTask.map((task, index) => {
       return <TodoListItem task={task} index={index} />;
     });
     setInputTask(bringTasks);

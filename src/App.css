@@ -69,6 +69,39 @@ body {
   pointer-events: none;
 }
 
+.TodoListContainer {
+  height: 500px;
+  width: 90%;
+  position: relative;
+  overflow-y: scroll;
+  display: grid;
+  place-items: center;
+}
+
+.todolistitem {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  margin: 5px 0;
+  justify-content: space-between;
+  padding: 0 15px;
+  border-radius: 5px;
+  background-color: greenyellow;
+}
+
+.name {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.todolistitem i {
+  font-size: 0.8rem;
+}
+
+.icons {
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
