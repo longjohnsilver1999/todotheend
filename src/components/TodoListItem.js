@@ -72,11 +72,16 @@ function TodoListItem({ task }) {
           <i
             className={edit}
             onClick={() => alert("Completed Task can't be edited")}
+            id="icons"
           ></i>
         ) : (
-          <i className={edit} onClick={editTaskHandler}></i>
+          <i className={edit} id="icons" onClick={editTaskHandler}></i>
         )}
-        <i className="fa-solid fa-trash" onClick={deleteTaskHandler}></i>
+        <i
+          className="fa-solid fa-trash"
+          id="icons"
+          onClick={deleteTaskHandler}
+        ></i>
       </div>
     </div>
   );
